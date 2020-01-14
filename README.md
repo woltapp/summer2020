@@ -2,7 +2,7 @@
 
 _This is a mandatory homework task for Wolt's engineering intern positions. Read more about our summer jobs in 2020 [here](https://www.wolt.com)._
 
-_Every intern who we hired last year continued with us as a software engineer after the summer. Good luck with the assignment and hopefully we will see you in our team soon!_
+_Every intern who we hired last year continued with us as a software engineer after the summer. Hopefully you are one those this year. Good luck with the assignment!_
 
 ## In short
 
