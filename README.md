@@ -108,6 +108,6 @@ Bonus task is completely optional and it doesn't affect how we review assignment
 
 ## Questions?
 
-Contact [Severi](severi.kausola@wolt.com)
+Contact severi.kausola@wolt.com
 
 
