@@ -64,9 +64,9 @@ There are no restrictions on design, so restaurants can be displayed vertically,
 
 In addition of rendering restaurants, create a possibility to sort restaurants alphabetically in ascending / descending order, e.g. by adding a _sort_-button on the top of the list.
 
-An example what the end result could look like:
+Below is an example how the user interface could look like:
 
-![](https://drive.google.com/uc?export=view&id=15HOCThwnuMNrjzy8X5A0oKvWdQezYHMX)
+[![frontend.png](https://i.postimg.cc/0yHwwJkH/frontend.png)](https://postimg.cc/9DZ030qG)
 
 <a name="option2"></a>
 ## Option 2) Backend task - search
