@@ -98,13 +98,12 @@ Bonus task is completely optional and it doesn't affect how we review assignment
 ## Instructions
 - Write the assignment using either TypeScript / JavaScript, Python, Scala, Kotlin or Java
 - Feel free to use any 3rd party framework / library, however try to minimize external dependencies
-- Write clear instructions how to get the project up and running
 
 ## Few tips
 - Everyone in Wolt loves clean code
 - Everyone in Wolt also loves good unit test coverage
 - Try to figure out what is the essential part in this task. Focus on that first.
-- Don't forget README.md
+- Don't forget README.md with clear instructions how to get the project up and running
 
 ## Questions?
 
