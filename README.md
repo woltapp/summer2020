@@ -91,7 +91,7 @@ Restaurant data also includes a field called _blurhash_. As a bonus task you can
 - In frontend task you can render the blurhash data
 - In backend task you can e.g. validate that _blurhash_-field is correct when loading data from _restaurant.json_
 
-There are some ready-made libraries for manipulating _blurhash_ values. Feel free to also create your own one.
+There are some ready-made libraries for manipulating _blurhash_ values. Feel free use those or create your own one.
 
 Bonus task is completely optional and it doesn't affect how we review assignments. It exists only for fun! 😀
     
