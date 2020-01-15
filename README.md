@@ -62,7 +62,7 @@ Build a web page that shows all fifty restaurants. You can freely decide which f
 
 There are no restrictions on design, so restaurants can be displayed vertically, horizontally, on a grid or however you decide. Aim for clear and responsive design.
 
-In addition of rendering restaurants, create a possibility to sort restaurants alphabetically in ascending / descending order, e.g. by adding a _sort_-button on the top of the list.
+In addition of rendering restaurants, create a possibility to sort restaurants alphabetically in ascending **and** descending order, e.g. by adding a _sort_-button on the top of the list.
 
 Below is an example how the user interface could look like:
 
