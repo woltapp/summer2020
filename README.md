@@ -7,7 +7,7 @@ _Good luck and happy coding!_
 ## In short
 
 1. Select either frontend or backend version of this assignment. **No need to do both of them**.
-2. Solve the task. When you are ready, leave us a frontend application [here](https://www.wolt.com) **or** a backend application [here](https://www.wolt.com). Attach source codes as a zip-file to the application form.
+2. Solve the task. When you are ready, leave us a frontend application [here](https://jobs.lever.co/wolt/7fbb1572-6697-4e9d-b6ba-0e316ecb9cc1) **or** a backend application [here](https://jobs.lever.co/wolt/7d18a18f-1a28-48a6-ab69-a17327466675). Attach source codes as a zip-file to the application form.
 3. That's it! We will get back to you.
 
 ## Overview
