@@ -97,7 +97,7 @@ Bonus task is completely optional and it doesn't affect how we review assignment
     
 ## Instructions
 - Write the assignment using either TypeScript / JavaScript, Python, Scala, Kotlin or Java
-- Feel free to use any 3rd party framework / library, however try to minimize external dependencies
+- Feel free to use any 3rd party framework / library, however try to minimize external dependencies. _React_ is popular in Wolt, so would be great if you can use that in frontend version of this task.
 
 ## Few tips
 - Everyone in Wolt loves clean code
