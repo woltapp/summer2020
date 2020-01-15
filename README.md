@@ -1,13 +1,13 @@
-# Summer 2020 Internships - Engineering Assignment
+# Summer 2020 Internships - Engineering Pre-assignment
 
-_This is a mandatory homework task for Wolt's engineering intern positions. Read more about our summer jobs in 2020 [here](https://www.wolt.com)._
+_This is a mandatory pre-assignment task for Wolt's engineering intern positions. Read more about our summer jobs in 2020 [here](https://www.wolt.com)._
 
-_Every intern who we hired last year continued with us as a software engineer after the summer. Good luck with the assignment!_
+_Good luck and happy coding!_
 
 ## In short
 
 1. Select either frontend or backend version of this assignment. **No need to do both of them**.
-2. Solve the task. When you are ready, leave us an application [here](https://www.wolt.com) accompanied by your solution (stored in a GitHub repository or if in other format, send your code to severi.kausola@wolt.com)
+2. Solve the task. When you are ready, leave us a frontend application [here](https://www.wolt.com) **or** a backend application [here](https://www.wolt.com). Attach source codes as a zip-file to the application form.
 3. That's it! We will get back to you.
 
 ## Overview
@@ -70,18 +70,18 @@ Below is an example how the user interface could look like:
 
 <a name="option2"></a>
 ## Option 2) Backend task - search
-Create an API endpoint that allows searching restaurants. API needs to accept three parameters:
+Create a REST API endpoint that allows searching restaurants. API needs to accept three parameters:
 - _q_: query string. Full or partial match for the string is searched from _name_, _description_ and _tags_ fields. A minimum length for the query string is one character.
 - _lat_: latitude coordinate (customer's location)
 - _lon_ : longitude coordinate (customer's location)
 
-API will return restaurant (objects) which **match the given query string** and are **closer than 3 kilometers** from coordinates. 
+API should return restaurant (objects) which **match the given query string** and are **closer than 3 kilometers** from coordinates. 
 
 Example query:
 
     /restaurants/search?q=sushi&lat=60.17045&lon=24.93147
     
-This search would return restaurants which contain a word _sushi_ and are closer than 3km to the location [60.17045, 24.93147].
+This search would return restaurants (in JSON format) which contain a word _sushi_ and are closer than 3km to the point [60.17045, 24.93147]. 
     
 Please **do not** use any on-disk database (MySQL, PostgreSQL, ...) or ElasticSearch in this assignment. The task can be completed without them.
     
