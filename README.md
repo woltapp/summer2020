@@ -101,7 +101,7 @@ Bonus task is completely optional and it doesn't affect how we review assignment
 
 ## Few tips
 - Everyone in Wolt loves clean code
-- Everyone in Wolt also loves good unit test coverage
+- Everyone in Wolt also loves good tests
 - Try to figure out what is the essential part in this task. Focus on that first.
 - Don't forget README.md with clear instructions how to get the project up and running
 
