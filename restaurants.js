@@ -1,4 +1,4 @@
-{
+var jsonContent = {
     "restaurants": [
         {
             "blurhash": "UUKJMXv|x]oz0gtRM{V@AHRQwvxZXSs9s;o0",
