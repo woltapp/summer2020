@@ -1,0 +1,27 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "globals": {
+        "jsonContent": "readonly",
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-plusplus" : "off",
+        "func-names" : "off",
+        "no-multi-str" : "off",
+        "eqeqeq" : "off",
+        "import/no-unresolved" : "off", 
+        "max-len" : "off"
+    }
+}
