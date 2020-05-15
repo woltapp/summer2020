@@ -1,0 +1,30 @@
+{
+  "name": "summer2020",
+  "version": "1.0.0",
+  "description": "_This is a mandatory pre-assignment task for Wolt's engineering intern positions. Read more about our summer jobs in 2020 [here](https://www.wolt.com)._",
+  "main": "restaurants.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-syrkashev/summer2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-syrkashev/summer2020/issues"
+  },
+  "homepage": "https://github.com/victor-syrkashev/summer2020#readme",
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.19.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "geolib": "^3.2.1"
+  }
+}

@@ -6,9 +6,6 @@ exports.search = function (req, res) {
   const numberOfRestaurants = jsonContent.restaurants.length;
   const selectionByQueryString = [];
   for (let i = 0; i < numberOfRestaurants; i++) {
-    // В цикле ниже меняются только условия, но действие при выполнении его, одинаковое
-    // Вероятно было бы лучше объеденить их через ИЛИ || ?
-    // Но тогда получится слишком грамоздкое условие, как лучше?
     if (jsonContent.restaurants[i].name.indexOf(queryString) !== -1) {
       selectionByQueryString.push(jsonContent.restaurants[i]);
     } else if (jsonContent.restaurants[i].description.indexOf(queryString) !== -1) {
@@ -29,9 +26,5 @@ exports.search = function (req, res) {
       selectedRestaurants.push(selectionByQueryString[i]);
     }
   }
-  if (selectedRestaurants.length) {
-    res.json(selectedRestaurants);
-  } else {
-    res.send('There are no restaurants by your request');
-  }
+  res.json(selectedRestaurants);
 };
