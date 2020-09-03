@@ -4,7 +4,8 @@
   "description": "_This is a mandatory pre-assignment task for Wolt's engineering intern positions. Read more about our summer jobs in 2020 [here](https://www.wolt.com)._",
   "main": "restaurants.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",

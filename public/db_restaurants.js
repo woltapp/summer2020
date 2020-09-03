@@ -924,4 +924,3 @@ const jsonContent = {
     },
   ],
 };
-module.exports = jsonContent;

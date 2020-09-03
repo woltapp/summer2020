@@ -8,7 +8,7 @@
         "airbnb-base"
     ],
     "globals": {
-        "jsonContent": "readonly",
+        "jsonContent": true,
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },

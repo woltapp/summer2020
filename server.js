@@ -1,7 +1,10 @@
 const express = require('express');
-const restaurantsModule = require('./modules/restaurants');
+const restaurants = require('./modules/restaurants');
 
 const app = express();
 
-app.get('/restaurants/search', restaurantsModule.search);
+app.use(express.static('public'));
+app.get('/restaurants/search', restaurants.search);
+
 app.listen(3000);
+console.log('Server starts!');
