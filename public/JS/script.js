@@ -1,7 +1,7 @@
 (function () {
-  //window.onload = function () {
+  //  window.onload = function () {
   //  document.querySelector('.spinner-border').style.display = 'none';
-  //};
+  //  };
   const linkDiv = document.querySelector('.row');
   const restaurantsArray = jsonContent.restaurants;
   function createRestaurantsCards(restaurantsList) {
@@ -32,19 +32,6 @@
     }
     linkDiv.innerHTML += massiveCards;
   }
-  function alphabetSortingArray(elem) {
-    elem.sort((a, b) => {
-      const nameA = a.name.toLowerCase();
-      const nameB = b.name.toLowerCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
-    });
-  }
   const hiddenBtn = document.querySelectorAll('.hidden');
   const searchRestaurant = document.querySelector('.searchRestaurant');
   searchRestaurant.onsubmit = function search(event) {
@@ -65,9 +52,20 @@
     const randomLongitude = Math.random() * (maxLongitude - minLongitude) + minLongitude;
     const searchWords = event.target.search_word.value;
     window.history.replaceState({}, '', searchWords);
-    //Функция ниже будет вызываться для заданного numberOfPage,пока это значение фиксированно!
-    //function createListOfReasaurants(numberOfPage) {
-      const requestUrl = `/restaurants/search?q=${searchWords}&lat=${randomLatitude}&lon=${randomLongitude}&page=2`;//${numberOfPage}`;
+    hiddenBtn[0].hidden = false;
+    hiddenBtn[1].hidden = false;
+    const ascAlphabetSortingBtn = document.querySelector('.ascAlphSort');
+    const descAlphabetSortingBtn = document.querySelector('.descAlphSort');
+    let numberOfPage = 1;
+    let requestUrl = '';
+    function createListOfReasaurants(elem) {
+      if (elem === undefined) {
+        requestUrl = `/restaurants/search?q=${searchWords}&lat=${randomLatitude}&lon=${randomLongitude}&page=${numberOfPage}`;
+      } else {
+        requestUrl = `/restaurants/search?q=${searchWords}&lat=${randomLatitude}&lon=${randomLongitude}&page=${numberOfPage}` + `${elem}`;
+      }
+      const linkNav = document.querySelector('.pagination');
+      linkNav.innerHTML = '';
       const request = new XMLHttpRequest();
       request.open('GET', requestUrl);
       request.responseType = 'json';
@@ -78,22 +76,38 @@
           linkDiv.innerHTML = 'Unfortunately there is no such restaurant';
           return;
         }
-        hiddenBtn[0].hidden = false;
-        hiddenBtn[1].hidden = false;
         createRestaurantsCards(foundRestaurants.data);
-        const ascAlphabetSortingBtn = document.querySelector('.ascAlphSort');
-        ascAlphabetSortingBtn.onclick = function () {
-          alphabetSortingArray(foundRestaurants.data);
-          createRestaurantsCards(foundRestaurants.data);
-          window.history.replaceState({}, '', '/asc');
-        };
-        const descAlphabetSortingBtn = document.querySelector('.descAlphSort');
-        descAlphabetSortingBtn.onclick = function () {
-          alphabetSortingArray(foundRestaurants.data);
-          foundRestaurants.data.reverse();
-          createRestaurantsCards(foundRestaurants.data);
-          window.history.replaceState({}, '', '/desc');
-        };
+        let navContent = '';
+        for (let i = 1; i <= foundRestaurants.numberOfPages; i++) {
+          if (i == numberOfPage) {
+            navContent += `<li class='page-item active'><a class='page-link'>${i}</a></li>`;
+          } else {
+            navContent += `<li class='page-item'><a class='page-link'>${i}</a></li>`;
+          }
+        }
+        linkNav.innerHTML += navContent;
       };
     }
+    createListOfReasaurants();
+    ascAlphabetSortingBtn.onclick = function () {
+      createListOfReasaurants('&sort=asc');
+      window.history.replaceState({}, '', '/asc');
+    };
+    descAlphabetSortingBtn.onclick = function () {
+      createListOfReasaurants('&sort=desc');
+      window.history.replaceState({}, '', '/desc');
+    };
+    const pagination = document.getElementById('pagination');
+    pagination.onclick = function (e) {
+      const tar = e.target;
+      numberOfPage = tar.innerHTML;
+      if (ascAlphabetSortingBtn.onclick === true) {
+        createListOfReasaurants('&sort=asc');
+      } else if (descAlphabetSortingBtn.onclick === true) {
+        createListOfReasaurants('&sort=desc');
+      } else {
+        createListOfReasaurants();
+      }
+    };
+  };
 }());
